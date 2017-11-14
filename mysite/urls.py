@@ -15,8 +15,11 @@ Including another URLconf
 """
 from django.conf.urls import include, url
 from django.contrib import admin
+# from mysite.core import views as core_views
 
 urlpatterns = [
     url(r'^polls/', include('polls.urls')),
+    url(r'^core/', include('core.urls')),
     url(r'^admin/', admin.site.urls),
+    # url(r'^signup/$', core_views.signup, name='signup'),
 ]
