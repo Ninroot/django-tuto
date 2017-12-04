@@ -20,6 +20,8 @@ from django.contrib import admin
 urlpatterns = [
     url(r'^polls/', include('polls.urls')),
     url(r'^core/', include('core.urls')),
+    url(r'^login/', include('login.urls')),
     url(r'^admin/', admin.site.urls),
+    url('^', include('django.contrib.auth.urls'))
     # url(r'^signup/$', core_views.signup, name='signup'),
 ]
